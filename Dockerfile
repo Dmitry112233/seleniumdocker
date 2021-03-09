@@ -10,6 +10,7 @@ ADD target/libs libs
 
 ADD src/main/resources/testng.xml testng.xml
 ADD healthcheck.sh healthcheck.sh
+RUN dos2unix healthcheck.sh
 
 ENTRYPOINT sh healthcheck.sh
 
